@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {12,45,7,89,23};
+
+    int *ptr = arr;
+
+    int largest = *ptr;
+
+    for(int i=1; i<5; i++) {
+        if(*(ptr+i) > largest) {
+            largest = *(ptr+i);
+        }
+    }
+
+    cout << largest;
+
+    return 0;
+}
